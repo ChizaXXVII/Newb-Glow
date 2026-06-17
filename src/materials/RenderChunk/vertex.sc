@@ -175,7 +175,7 @@ void main() {
 
   v_extra = vec4(shade, worldPos.y, water, shimmer);
   v_refl = refl;
-  v_texcoord0 = a_texcoord0;
+  v_texcoord0 = vec2(float((uv0.x & 32767u) << uint(1)), float((uv0.y & 32767u) << uint(1))) * vec2_splat(1.525902189314365386962890625e-05);
   v_lightmapUV = uv1;
   v_color0 = color;
   v_color1 = a_color0;
